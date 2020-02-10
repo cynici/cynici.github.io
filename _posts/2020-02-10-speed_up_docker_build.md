@@ -3,7 +3,7 @@
 Not an earth-shattering discovery but a simple nifty time-saving trick when developing docker images that might have escaped your notice.
 
 I'll focus on the most common use-case where Debian/Ubuntu variant is used as the base image in combination
-with a separate apt-cacher-ng service. A tool to apt-cacher-ng for RHEL/CentOS yum could be https://github.com/dagwieers/mrepo
+with a separate apt-cacher-ng service. A tool to apt-cacher-ng for RHEL/CentOS yum could be [mrepo](https://github.com/dagwieers/mrepo)
 
 ## How?
 
