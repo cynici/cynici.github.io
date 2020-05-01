@@ -14,3 +14,5 @@ But you only have the luxury of practicing good hygiene while your product is in
 In other words, while developing proof-of-concept (POC) and prototypes, you must keep a complete record of 
 makeshift compromises and shortcuts for the sake of expediency. 
 They must be redone properly before the POC graduate to production use.
+At the very least, guard against input which violates your POC design
+constraints with assertions.
