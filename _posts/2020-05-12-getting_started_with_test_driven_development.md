@@ -1,5 +1,7 @@
 # Getting started with Test Driven Development
 
+*[an excerpt]*
+
 When discussing TDD we consider a task to be a subset of a requirement
 that can be implemented in a few days or less (Beck and Fowler2001).
 
@@ -11,15 +13,19 @@ of the following:
 – Writing a small number of new and failing automated unit test case(s)
   for the task athand–Implementing code which should allow the new
   unit tests cases to pass
+
 – Re-running the new unit test cases to ensure they now pass with the
   new code
 
 ##  Per-task cycles:
 
 – Integrate code and tests for new code into existing code base
+
 – Re-running all the test cases in the code base to ensure the
   new code does not breakany previously running test cases
+
 – Refactoring the implementation or test code (as necessary)
+
 – Re-running all tests in the code base to ensure that the
   refactored code does not breakany previously passing test cases
 
