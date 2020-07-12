@@ -9,10 +9,11 @@ even more.
 In spite of the standard, a number of obscure but crucial
 details have eluded many shell programmers - details which make it
 extremely difficult to write scripts that can securely
-handle potentially malicious input or behave correctly in a environment
+handle potentially malicious input or behave correctly in an environment
 vastly different from the programmers'.
 
 You'll agree with me after reading the
 [Rich's sh (POSIX shell) tricks](https://www.etalabs.net/sh_tricks.html).
-Or, the article will at least make you a better shell programmer.
+For me, the article has demystefied a number of shell oddities that
+have tripped me up in the past.
 
