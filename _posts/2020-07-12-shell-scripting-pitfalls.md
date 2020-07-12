@@ -10,8 +10,9 @@ In spite of the standard, a number of lesser-known but crucial
 details have eluded many shell users - details which make it
 extremely difficult to write scripts that can securely
 handle potentially malicious input or behave correctly in a environment
-vastly different from the developer's.
+vastly different from the programmers'.
 
 You'll agree with me after reading the
-[Rich's sh (POSIX shell) tricls](https://www.etalabs.net/sh_tricks.html)
+[Rich's sh (POSIX shell) tricks](https://www.etalabs.net/sh_tricks.html).
+Or, it will at least make you a better shell programmer.
 
