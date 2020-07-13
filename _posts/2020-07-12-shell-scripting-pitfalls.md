@@ -6,7 +6,7 @@ tool of choice for automating tasks. The wide availability of existing
 recipes and how-tos on the Internet has lowered the barrier of entry
 even more.
 
-In spite of the standard, a number of obscure but crucial
+In spite of the standard, a number of subtle but crucial
 details have eluded many shell programmers - details which make it
 extremely difficult to write scripts that can securely
 handle potentially malicious input or behave correctly in an environment
