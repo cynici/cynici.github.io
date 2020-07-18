@@ -23,3 +23,7 @@ When and how to pin your dependencies?
 - <https://www.promptworks.com/blog/pin-all-dependencies>
 - <https://before-you-ship.18f.gov/infrastructure/pinning-dependencies/>
 
+ps. There is always an exception, when the benefits of tracking the
+*head* of dependencies outweighs the costs, as in the case of
+Netflix using *head* release of FreeBSD,
+<https://archive.fosdem.org/2019/schedule/event/netflix_freebsd/attachments/slides/3103/export/events/attachments/netflix_freebsd/slides/3103/FOSDEM_2019_Netflix_and_FreeBSD.pdf>
