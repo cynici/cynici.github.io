@@ -17,7 +17,8 @@ initiate connection to it.
 The URI is merely used by Google to redirect browsers back to the
 application as part of the OAuth protocol.
 
-<img width="90%" src="https://dba-presents.com/images/mythoughts/OAuth2/OAuth2_algorithm.png">
+[<img width="90%" src="https://dba-presents.com/images/mythoughts/OAuth2/OAuth2_algorithm.png">](https://dba-presents.com/index.php/other/my-thoughts/125-what-is-openid-oauth2-and-google-sign-in)
+
 
 In summary, the networking prerequisites are as follows.
 The same requirements apply for other OAuth identity provider
