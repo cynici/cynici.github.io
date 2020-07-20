@@ -15,3 +15,12 @@ from the Internet - Google will not attempt to connect to it.
 The URI is merely used by Google to redirect browsers back to the
 application as part of the OAuth protocol.
 
+<img width="90%" src="https://dba-presents.com/images/mythoughts/OAuth2/OAuth2_algorithm.png">
+
+In summary, the networking prerequisites are:
+
+- browser needs to connect to application server, by DNS or IP, and get response
+- browser needs to connect to Google and get response
+- application server needs to connect to Google and get response
+
+
