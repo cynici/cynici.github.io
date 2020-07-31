@@ -1,4 +1,4 @@
-# Not published
+# Note to self
 
 The landing page for <cynici.github.io> is [index.md](index.md)
 
