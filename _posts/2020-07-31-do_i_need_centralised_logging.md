@@ -39,15 +39,19 @@ because logs are now easily available for all to review.
 ## Sentry
 
 If you never had a centralised logging solution in place, chances are you would want
-to start with a solution that delivers *notesworthy* information from your application.
+to start with a solution that delivers *notesworthy* information from your application - the log
+message is for human consumption. You could get by with tagging a log level to each message.
 I recommend you get started with Sentry, either [on-premise](https://github.com/getsentry/onpremise)
 or [hosted](https://sentry.io/welcome/).
 
-Sentry *is not* designed for log aggregation.
+Sentry *is not* designed for log aggregation where you would want the solution to parse 
+the log message for structure and semantics and break it down into as many fields as
+possible so that you can perform analysis by arbitrary field(s).
 
 Log aggregation is a cornerstone of observability which you might need to discover
 unknown unknowns when your application fails. But that is an orthogonal discourse
 in [Software Reliability Engineering](https://landing.google.com/sre/books/)
+
 
 What I like about it
 
