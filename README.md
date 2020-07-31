@@ -1,7 +1,6 @@
-# NOT IN USE
+# Not published
 
-superseded by index.md
+The landing page for <cynici.github.io> is [index.md](index.md)
 
-# Your blog
+My first stab at git-based blogging based on https://www.fast.ai/2020/01/16/fast_template/
 
-This is the repository for your blog! Click *_config.yml* above to get started and fill in the details. Then click *index.md* and edit it to start creating your home page.
