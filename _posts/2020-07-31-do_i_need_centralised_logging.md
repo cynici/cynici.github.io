@@ -32,7 +32,13 @@ Taking a leaf from <https://thevaluable.dev/dry-principle-cost-benefit-example/>
 As soon as you implement centralised logging, every developer in your team 
 will feel motivated, if not peer-pressured, to adopt a common logging standard,
 error handling, as well as some sort of application/service/module naming convention
-because logs are now easily available for all to review.  
+because logs are now easily available for all to review.
+
+When flying solo, a log message like this `unknown class type` might suffice
+(not necessary good for your own sanity in the long run though). With centralised logging,
+any curious peer would pester you to either write a more meaningful message and/or 
+provide better inline documentation so that an on-call person would know what/how
+to deal with the exception.
 
 ---
 
