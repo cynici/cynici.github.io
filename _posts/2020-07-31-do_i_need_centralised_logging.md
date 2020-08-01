@@ -57,9 +57,10 @@ Log aggregation for observability is one cornerstone of
 Amongst others, it enables you to discover unknown unknowns when your application 
 fails or under-performs. A good log aggregation solution can subsume the role of Sentry
 but at a significantly higher cost in its implementation and maintenance.
-To derive maximum benefit from the solution, it should parse log messages to break it 
-down into as many fields as possible so that you can perform statistical analysis by 
-arbitrary field(s).
+To derive maximum benefit from the solution, in contrast to log monitoring,  your log messages
+should have consistent structure that can be grokked automatically by rules so that each message
+can be split into as many fields with associated data types as possible so that you can
+perform statistical analysis by arbitrary field(s).
 
 What I like about it
 
