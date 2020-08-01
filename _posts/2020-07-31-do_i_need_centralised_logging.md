@@ -50,14 +50,16 @@ message is for human consumption. You could get by with tagging a log level to e
 I recommend you get started with Sentry, either [on-premise](https://github.com/getsentry/onpremise)
 or [hosted](https://sentry.io/welcome/).
 
-Sentry *is not* designed for log aggregation where you would want the solution to parse 
-the log message for structure and semantics and break it down into as many fields as
-possible so that you can perform analysis by arbitrary field(s).
+Sentry *is not* designed for log aggregation.
 
-Log aggregation is a cornerstone of observability which you might need to discover
-unknown unknowns when your application fails. But that is an orthogonal discourse
-in [Software Reliability Engineering](https://landing.google.com/sre/books/)
-
+Log aggregation for observability is one cornerstone of 
+[Software Reliability Engineering](https://landing.google.com/sre/books/).
+Amongst others, it enables you to discover unknown unknowns when your application 
+fails or under-performs. A good log aggregation solution can subsume the role of Sentry
+but at a significantly higher cost in its implementation and maintenance.
+To derive maximum benefit from the solution, it should parse log messages to break it 
+down into as many fields as possible so that you can perform statistical analysis by 
+arbitrary field(s).
 
 What I like about it
 
@@ -75,7 +77,7 @@ What it doesn't do
   [ELK](https://www.elastic.co/what-is/elk-stack) or 
   [Graylog](https://www.graylog.org/), which are a lot more resource intensive
   
-- On-call escalation [Opsgenie](https://www.atlassian.com/software/opsgenie)
+- Calendar-based rosting, unatended alert escalation [Opsgenie](https://www.atlassian.com/software/opsgenie)
 
 
 
