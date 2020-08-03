@@ -27,7 +27,7 @@ Taking a leaf from <https://thevaluable.dev/dry-principle-cost-benefit-example/>
 *three or more*, <https://en.wikipedia.org/wiki/Communication_complexity>.
 
 ---
-:gift: **Understated benefits of centralise logging**
+:gift: **Understated benefits of centralised logging**
 
 As soon as you implement centralised logging, every developer in your team 
 will feel motivated, if not peer-pressured, to adopt a common logging standard,
@@ -50,7 +50,7 @@ message is for human consumption. You could get by with tagging a log level to e
 I recommend you get started with Sentry, either [on-premise](https://github.com/getsentry/onpremise)
 or [hosted](https://sentry.io/welcome/).
 
-Sentry *is not* designed for log aggregation.
+Sentry *is not* designed for log aggregation or metrics collection.
 
 Log aggregation for observability is one cornerstone of 
 [Software Reliability Engineering](https://landing.google.com/sre/books/).
@@ -61,6 +61,13 @@ To derive maximum benefit from the solution, in contrast to log monitoring,  you
 should have consistent structure that can be grokked automatically by rules so that each message
 can be split into as many fields with associated data types as possible so that you can
 perform statistical analysis by arbitrary field(s).
+
+If I already have a monitoring solution e.g. Zabbix, Icinga, Nagios, Sensu, etc.,
+can I not retrofit it for the purpose of exception logging?
+
+In theory, yes. While it is possible to write scripts to produce custom metrics to feed the monitoring agent,
+or make the application feed the monitoring agent directly, both approaches require non-trivial maintenance
+effort to keep the plugins and metrics in sync with the application to reflect different error conditions.  
 
 What I like about it
 
