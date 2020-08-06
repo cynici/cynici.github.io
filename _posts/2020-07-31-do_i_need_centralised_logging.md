@@ -50,7 +50,9 @@ message is for human consumption. You could get by with tagging a log level to e
 I recommend you get started with Sentry, either [on-premise](https://github.com/getsentry/onpremise)
 or [hosted](https://sentry.io/welcome/).
 
-Sentry *is not* designed for log aggregation or metrics collection.
+Sentry *is not* designed for log aggregation or metrics collection. Besides exception logging at its core,
+Sentry extends into the space of [Application Performance Monitoring](https://sentry.io/for/performance/).
+Opentracing appears to be on its roadmap too, starting with Javascript.
 
 Log aggregation for observability is one cornerstone of 
 [Software Reliability Engineering](https://landing.google.com/sre/books/).
