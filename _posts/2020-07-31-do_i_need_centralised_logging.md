@@ -64,14 +64,15 @@ should have consistent structure that can be grokked automatically by rules so t
 can be split into as many fields with associated data types as possible so that you can
 perform statistical analysis by arbitrary field(s).
 
-If I already have a monitoring solution e.g. Zabbix, Icinga, Nagios, Sensu, etc.,
+If I already have a monitoring solution e.g. Zabbix, Icinga, Nagios, Sensu, Graphite/carbon, etc.,
 can I not retrofit it for the purpose of exception logging?
 
 In theory, yes. While it is possible to write scripts to produce custom metrics to feed the monitoring agent,
-or make the application feed the monitoring agent directly, both approaches require non-trivial maintenance
-effort to keep the plugins and metrics in sync with the application to reflect different error conditions.  
+or make the application feed the monitoring server directly, both approaches require non-trivial maintenance
+effort to keep the plugins and metrics in sync with the application to reflect different error conditions.
+So do not underestimate the instrumentation cost.
 
-What I like about it
+What I like about Sentry
 
 - Client-side library in many popular languages
 - Different authentication provider through 3rd-party extension
@@ -82,7 +83,7 @@ What I like about it
 
 What it doesn't do
 
-- Repeating myself here for emphasis a typically log aggregation solution would offer
+- Repeating myself here for emphasis - a typically log aggregation solution would offer
   arbitrary multi-dimensional analysis and visualization e.g. map widget, as you get in 
   [ELK](https://www.elastic.co/what-is/elk-stack) or 
   [Graylog](https://www.graylog.org/), which are a lot more resource intensive
