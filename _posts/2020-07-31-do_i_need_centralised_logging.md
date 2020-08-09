@@ -23,8 +23,9 @@ You're most welcome to contribute to this list that I have just rattled off
 the top of my head.
 
 Taking a leaf from <https://thevaluable.dev/dry-principle-cost-benefit-example/>,
-*more than two* is a recurring theme here. It could have been rephrased as
-*three or more*, <https://en.wikipedia.org/wiki/Communication_complexity>.
+*more than two* is a recurring theme here.
+See [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming))
+and <https://en.wikipedia.org/wiki/Communication_complexity>.
 
 ---
 :gift: **Understated benefits of centralised logging**
