@@ -66,3 +66,13 @@ log_by_lua_block {
     print("req: ", ngx.var.request_uri)
 }
 ```
+
+## Location matching optional trailing slash
+
+Use the idiom described in <https://serverfault.com/a/476368>
+
+```nginx
+location ~ ^/api/v2/hubs(?:/(.*))?$ {
+  proxy_pass http://backend/api/hubs/$1;
+}
+```
