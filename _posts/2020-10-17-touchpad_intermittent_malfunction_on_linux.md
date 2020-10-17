@@ -48,9 +48,16 @@ I saved and compared `lsmod` output in both cases - fell back to terminal using 
 when the touchpad malfunctioned. The kernel modules `hid_i2c` and `hid_generic` were absent 
 when the touchpad didn't work.
 
-Based on Jeroen's solution for Elan touchpad, I created `/etc/modules-load.d/99_touchpad.conf`
+Based on Jeroen's solution for Elan touchpad, I created `/etc/modprobe.d/99-touchpad.conf`
 
 ```
-softdep hid_i2c pre: pinctrl_amd
+softdep i2c_hid pre: pinctrl_amd
 softdep hid_generic pre: pinctrl_amd
+```
+
+Second attempt,
+
+```
+sudo rmmod i2c_hid
+sudo modprobe i2c_hid
 ```
