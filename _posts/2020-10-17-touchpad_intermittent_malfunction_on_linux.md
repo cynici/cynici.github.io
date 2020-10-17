@@ -1,22 +1,21 @@
 # Touchpad intermittent malfunction on on Linux
 
 The touchpad on my new laptop running Linux 5.8.14-1 [openSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed)
-20201009 failed to work intermittently. The symptom appeared already in the graphical login screen; 
-the pointer won't response to the touchpad and appeared stuck in the middle on the screen.
+20201009 failed to work intermittently. The symptom appeared showed up in the graphical login screen; 
+the pointer won't respond to the touchpad and appeared stuck in the middle on the screen.
 
 `dmesg` output would show this error:
 
 ```
-[    2.984796] i2c_hid i2c-UNIW0001:00: HID over i2c has not been provided an Int IRQ
-[    2.984864] i2c_hid: probe of i2c-UNIW0001:00 failed with error -22
+[2.984796] i2c_hid i2c-UNIW0001:00: HID over i2c has not been provided an Int IRQ
+[2.984864] i2c_hid: probe of i2c-UNIW0001:00 failed with error -22
 ```
 
 When this happened, I had to reboot repeatedly until I could move the pointer on the login screen using the touchpad.
 
 ## Laptop hardware
 
-[WootBook Metal II PF4NU1F AMD Ryzen 7 4800H 2.9GHz Octa Core 14" Full HD (1920x1080) IPS Space Black Laptop]
-(https://www.wootware.co.za/wootbook-metal-ii-pf4nu1f-amd-ryzen-7-4800h-2-9ghz-octa-core-14-full-hd-1920x1080-ips-space-black-laptop.html)
+[WootBook Metal II PF4NU1F AMD Ryzen 7 4800H 2.9GHz Octa Core 14" Full HD (1920x1080) IPS Space Black Laptop](https://www.wootware.co.za/wootbook-metal-ii-pf4nu1f-amd-ryzen-7-4800h-2-9ghz-octa-core-14-full-hd-1920x1080-ips-space-black-laptop.html)
 rebranded from Tongfang PF4NU1F made by a company in China.
 
 This hardware is also sold with different names in other markets, 
