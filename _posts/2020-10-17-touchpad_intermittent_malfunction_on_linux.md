@@ -1,7 +1,7 @@
 # Touchpad intermittent malfunction on on Linux
 
 The touchpad on my new laptop running Linux 5.8.14-1 [openSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed)
-20201009 failed to work intermittently. The symptom appeared showed up in the graphical login screen; 
+20201009 failed to work intermittently. The symptom showed up in the graphical login screen; 
 the pointer won't respond to the touchpad and appeared stuck in the middle on the screen.
 
 `dmesg` output would show this error:
