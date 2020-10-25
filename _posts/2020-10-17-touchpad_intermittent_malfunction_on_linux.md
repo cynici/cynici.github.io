@@ -61,3 +61,21 @@ Second attempt,
 sudo rmmod i2c_hid
 sudo modprobe i2c_hid
 ```
+
+### 2020-10-25 update
+
+So, my final solution on openSUSE Tumbleweed:
+
+1. [Enable rc.local](https://www.linuxbabe.com/linux-server/how-to-enable-etcrc-local-with-systemd) 
+1. Create /etc/rc.local 
+
+  ```
+  #! /usr/bin/env bash
+
+  if lsmod | grep -q i2c_hid ; then
+      echo "Touch pad detected."
+  else
+      rmmod i2c_hid
+      modprobe i2c_hid
+  fi
+  ```
