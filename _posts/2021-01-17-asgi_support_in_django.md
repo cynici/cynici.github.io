@@ -2,7 +2,7 @@
 
 I was curious about the ASGI support that Django 3 offers an as alternative to WSGI. Here's my very short take of it.
 
-If you have Django application performance issue,
+If you have Python web application performance issue and you've not maxed out your database server,
 
 - metrics point to under/over-used core, tune WSGI server e.g. 
   [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/ThingsToKnow.html)
