@@ -5,7 +5,7 @@ I was curious about the ASGI support that Django 3 offers an as alternative to W
 If you have Python web application performance issue and you've not maxed out your database server,
 
 - metrics point to under/over-used core, tune WSGI server e.g. 
-  [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/ThingsToKnow.html) https://www.reddit.com/r/Python/comments/4s40ge/understanding_uwsgi_threads_processes_and_gil/d56f3oo?utm_source=share&utm_medium=web2x&context=3
+  [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/ThingsToKnow.html) https://www.reddit.com/r/Python/comments/4s40ge/understanding_uwsgi_threads_processes_and_gil/d56f3oo
 - metrics point to [C10K problem](http://www.kegel.com/c10k.html), 
   consider replacing WSGI with ASGI instead of ditching Django framework and investment you've made in it. 
   <https://arunrocks.com/a-guide-to-asgi-in-django-30-and-its-performance/>
