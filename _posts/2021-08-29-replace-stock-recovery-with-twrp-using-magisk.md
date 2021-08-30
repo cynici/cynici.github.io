@@ -2,7 +2,7 @@
 
 I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi. I have written the entire procedure in three parts:
 
-- [Unlock bootloader](2021/08/29/unlock-poco-f1-boot-loader-using-linux.html)
+- [Unlock bootloader](/2021/08/29/unlock-poco-f1-boot-loader-using-linux.html)
 - Replace stock recovery image with TWRP using Magisk
 - [Install (or flash) custom ROM using TWRP](/2021/08/29/install-custom-rom-using-twrp.html)
 
