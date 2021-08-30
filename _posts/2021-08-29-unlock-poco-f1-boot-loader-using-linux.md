@@ -1,10 +1,26 @@
-# Unlock POCO F1 boot loader using Linux
+# Unlock Xiaomi POCO F1 bootloader using Linux
 
-I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi.
+I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi. I have written the entire procedure in three parts:
 
-The first step is to unlock the boot loader but I have to resort to using the unofficial XiaoMiToolV2 because I use Fedora 34 Workstation instead of MS Windows which the official unlock app runs on.
+- Unlock bootloader
+- [Replace stock recovery image with TWRP using Magisk](/2021/08/29/replace-stock-recovery-with-twrp-using-magisk.html)
+- [Install (or flash) custom ROM using TWRP](/2021/08/29/install-custom-rom-using-twrp.html)
 
-1. As at 2021-08-29, there is no form to fill to request for unlock approval from Xiaomi or any waiting period. Instead follow every step described in this video <https://youtu.be/pByHHTvms4k>
+## Possible consequences after unlocking
+
+If in future, Google Safety enforces stricter checks, it may flag the phone as insecure. Any application which relies on the Google Safety status may cease to function, see <https://news.ycombinator.com/item?id=25025340>
+
+## Prerequisites
+
+- Register on [Xiaomi website](https://account.xiaomi.com/) to get an account
+- Log in to the account on the phone
+- Insert a valid SIM card with sufficient internet data bundle, at least 50 MB required during the unlock process
+
+## How
+
+The is part one where I resort to using the unofficial XiaoMiToolV2 because I use Fedora 34 Workstation instead of MS Windows which the official unlock app runs on.
+
+1. As at 2021-08-29, there is no form to fill to request for unlock approval from Xiaomi or any waiting period. Instead, follow every step described in this video <https://youtu.be/pByHHTvms4k>
 
 1. Clone XiaoMiToolV2 repo and check out linux branch
 

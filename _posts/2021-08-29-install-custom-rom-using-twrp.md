@@ -1,22 +1,26 @@
-# Install Evolution-X custom ROM on POCO F1
+# Install Evolution-X custom ROM on Xiaomi POCO F1
 
-I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi.
+I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi. I have the written entire procedure in three parts:
 
-Earlier on I have done these on my POCO F1:
+- [Unlock bootloader](2021/08/29/unlock-poco-f1-boot-loader-using-linux.html)
+- [Replace stock recovery image with TWRP using Magisk](/2021/08/29/replace-stock-recovery-with-twrp-using-magisk.html)
+- Install (or flash) custom ROM using TWRP
 
-1. [Unlock POCO F1 boot loader](2021/08/29/unlock-poco-f1-boot-loader-using-linux.html)
 
-1. [Replace stock recovery with TWRP using Magisk](2021/08/29/replace-stock-recovery-with-twrp-using-magisk.html)
+## My shortlist of custom ROMs based on Android 10 or later
 
 Having spent some days following discussions on Reddit and asking around, my choices of custom ROM boils down to these:
 
 - Pixel Experience (pe10) or (pe11)
 - Evolutoin-X (evox)
+- LineageOS
+
+## Getting started
 
 For a start, watch this video before doing anything, <https://www.youtube.com/watch?v=UY6DBJ7_Wyg>
 
 The procedure below should work just fine if I have a second thought about my choice. From the video, I have decided to install the latest released
-by developer Lakshay Garg (@planckton), <https://t.me/PocoPhoneGlobalUpdates/6791> on account that he is the developer for Pixel Experience. Know that evox-5.8 does not cater OTA update.
+by developer Lakshay Garg (@planckton), <https://t.me/PocoPhoneGlobalUpdates/6791> on account that he is the developer for the very received Pixel Experience. **Note that evox-5.8 does not cater OTA update.**
 
 1. Download 1.7 GB ZIP from <https://sourceforge.net/projects/evolutionx-beryllium/files/EvolutionX_5.8_beryllium-11-20210622-0849-UNOFFICIAL.zip/download> and save it on the phone
 

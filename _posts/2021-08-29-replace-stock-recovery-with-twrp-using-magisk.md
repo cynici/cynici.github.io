@@ -1,16 +1,18 @@
-# Replace stock recovery image on POCO F1 with TWRP using Magisk
+# Replace stock recovery image on Xiaomi POCO F1 with TWRP using Magisk
 
-I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi.
+I decided to replace MIUI 12.0.3 on my POCO F1 with a custom ROM because the phone will get no further update from Xiaomi. I have written the entire procedure in three parts:
 
-At this point, I have unlocked the boot loader on my POCO F1 running MIUI 12.0.3. The next step is to replace the stock recovery image with
-the venerable [Magisk](https://github.com/topjohnwu/Magisk) android application. The reason for using Magisk is to replace the recovery image
-on the phone permanently. Otherwise, MIUI will replace TWRP with the stock
-recovery image every time the phone reboots, in which case, I will have to
-re-run steps below to boot into TWRP image.
+- [Unlock bootloader](2021/08/29/unlock-poco-f1-boot-loader-using-linux.html)
+- Replace stock recovery image with TWRP using Magisk
+- [Install (or flash) custom ROM using TWRP](/2021/08/29/install-custom-rom-using-twrp.html)
+
+## How
+
+This step is to replace the stock recovery image with the venerable [Magisk](https://github.com/topjohnwu/Magisk) android application. The reason for using Magisk is to replace the recovery image on the phone permanently. Otherwise, MIUI will replace TWRP with the stock recovery image every time the phone reboots, in which case, I will have to re-run steps below to boot into TWRP image.
 
 Watch the video to get an idea the entire procedure using MS Windows, <https://www.youtube.com/watch?v=ZKEHRco06Eo> Below I describe what I had to do differently using Fedora 34 Workstation.
 
-Also important as emphasiseed in the video is that I have decided to retain "Encryption and Credentials" encrypted on the phone.
+Also important as emphasised in the video is that I have decided to retain "Encryption and Credentials" encrypted on the phone. This will mean having to perform backup and restore personal files if I opt for a custom ROM which does not support OTA and want to update it.
 
 1. Download the latest Magisk APK from <https://github.com/topjohnwu/Magisk/releases> and **save the APK file on the phone**
 
