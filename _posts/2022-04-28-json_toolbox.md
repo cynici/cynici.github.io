@@ -1,5 +1,7 @@
 # JSON toolbox
 
+What caught my eyes in <https://news.ycombinator.com/item?id=31166956>
+
 - [An Introduction to JQ](https://earthly.dev/blog/jq-select/)
 
 - [jq language description](https://github.com/stedolan/jq/wiki/jq-Language-Description)
