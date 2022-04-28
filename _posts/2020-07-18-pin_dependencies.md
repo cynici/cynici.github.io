@@ -31,6 +31,13 @@ the distribution packagers tend to be ultra conservative and do
 their best to maintain compatiblity so it *might be* worth the risk
 not to pin your packages to benefit from security and bug fixes.
 
+One more caveat - pip does not warn you of pinned version conflict because
+[it lacks dependency resolver](https://github.com/pypa/pip/issues/988)
+and happily completes
+`[pip intall -r requirements.txt](https://github.com/pypa/pip/issues/988)`
+Read this for mitigation techniques,
+<https://medium.com/knerd/the-nine-circles-of-python-dependency-hell-481d53e3e025>
+
 ps. There is always an exception, when the benefits of tracking the
 *head* of dependencies outweighs the costs, as in the case of
 Netflix using *head* release of FreeBSD,
