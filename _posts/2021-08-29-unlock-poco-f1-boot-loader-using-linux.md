@@ -18,9 +18,9 @@ Perhaps watch this video <https://youtu.be/pByHHTvms4k> first to get an idea of 
 
 This section is largely adapted from <https://github.com/francescotescari/XiaoMiToolV2/issues/23#issuecomment-908811724>. The original comment is very well written and apparently works on Ubuntu 20.04.3 LTS.
 
+- Register on [Xiaomi website](https://account.xiaomi.com/) to get an account and link your device. **Your Xiaomi account needs to be older than seven days!** 
 - Insert a valid SIM card with sufficient internet data bundle, at least 50 MB required during the unlock process
-- Register on [Xiaomi website](https://account.xiaomi.com/) to get an account
-- Log in to the account on the phone You can do this by going to their site OR even better yet, from signing in directly from Settings > Mi account in your phone.
+- Log in to the Xiaomi cloud account on the phone You can do this by going to their site OR even better yet, by signing in directly from Settings > Mi account on your phone. Do this via cellular data connection (not wifi) using your registered SIM number
 - On your phone, go to Settings > About phone and tap 7 times on "Mi version" to enter in "developer" mode, which enables "Developer options" in "Additional settings".
 - Go the to Additional setting > Developer options and turn on "OEM unlock" as well as "USB debugging".
 - Now, a very important step which many tutorials fail to even mention: go to "Mi Unlock status". It should say "Device is locked" and "Phone is safe" if you have never done this before. Tap "Add account and device" and follow the instructions (it will tell you to turn off your wifi connection and turn on your mobile data connection). But here is the catch, even if you have created an account with this phone years ago, it may give you an error (don't remember exactly what it was). This is what I believe caused the 20031 error, @vmavromatis , because it is exactly what I was experiencing until I found somewhere in the Xiaomi forums that you only need to log out from your phone and log in back again. The problem was that by doing that you are basically creating a new account and I was afraid that could make you wait a long time to get the account authorized. Fortunately I tried it and didn't have to wait at all. And that was all the prerequisites.
