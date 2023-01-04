@@ -1,4 +1,4 @@
-# WegGL failed on non-snap firefox 108
+# Video playback issues on non-snap firefox 108
 
 Due to preference (read: prejudice), I have [disabled snapd](https://ubuntuhandbook.org/index.php/2022/04/remove-snap-block-ubuntu-2204/) and [installed firefox from PPA](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04) instead.
 
@@ -38,7 +38,7 @@ Launch firefox from commandline, the follow non-fatal error shows up. Interestin
     This browser supports WebGL 2, but it is disabled or unavailable.
     ```
 
-3. Many youtube videos play just fine but not this one, <https://www.youtube.com/watch?v=69CRnH3lbDE>. And all Facebook, TikTok videos won't play on firefox.
+3. Many youtube videos play just fine but not this one, <https://www.youtube.com/watch?v=69CRnH3lbDE>. And all Facebook, TikTok videos won't play in firefox.
 
     ```text
     An error occurred. Please try again later. (Playback ID: 1Svca1VMbs2Y016)
