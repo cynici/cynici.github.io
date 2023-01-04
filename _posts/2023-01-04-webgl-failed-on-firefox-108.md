@@ -29,7 +29,7 @@ Launch firefox from commandline, the follow non-fatal error shows up. Interestin
 
     Status: WebGL creation failed: * WebglAllowWindowsNativeGl:false restricts context creation on this system. () * Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
     ```
-  
+
 2. <https://webglreport.com/>
 
     ```text
@@ -38,7 +38,7 @@ Launch firefox from commandline, the follow non-fatal error shows up. Interestin
     This browser supports WebGL 2, but it is disabled or unavailable.
     ```
 
-3. Many youtube videos play just fine but not this one, <https://www.youtube.com/watch?v=69CRnH3lbDE>
+3. Many youtube videos play just fine but not this one, <https://www.youtube.com/watch?v=69CRnH3lbDE>. And all Facebook, TikTok videos won't play on firefox.
 
     ```text
     An error occurred. Please try again later. (Playback ID: 1Svca1VMbs2Y016)
