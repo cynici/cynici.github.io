@@ -1,20 +1,28 @@
 # Video playback issues on non-snap firefox 108
 
-Due to preference (read: prejudice), I have [disabled snapd](https://ubuntuhandbook.org/index.php/2022/04/remove-snap-block-ubuntu-2204/) and [installed firefox from PPA](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04) instead.
+My laptop setup:
 
-My workstation setup:
-
+* Ubuntu Jammy 22.04 Desktop
 * [MSI Stealth 15M](https://www.msi.com/Laptop/Stealth-15M-A11SX-GTX/Specification)
   * 11th gen Intel Core i7
   * **NVIDIA GeForce GTX 1660**
-* Ubuntu Jammy 22.04 Desktop
 * **Wayland** windows server
-* Secure boot enabled in BIOS
 * Proprietary [**nvidia-driver-525**](https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/)
+* Secure boot enabled in BIOS
+
+I [disabled snapd](https://ubuntuhandbook.org/index.php/2022/04/remove-snap-block-ubuntu-2204/) and [installed non-snap firefox from PPA](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04) instead.
 
 ## Problem description
 
-Launch firefox from commandline, the follow non-fatal error shows up. Interestingly, none of these issues show up in Chrome browser.
+The first step to troubleshoot Firefox issue is to launch it from commandline:
+
+1. `firefox -P`
+2. Create a new profile so that *about:config* use all the default values
+3. Browse to the problematic URL and observe the log messages
+4. Use incognito tab if necessary to rule out interference from add-on
+
+When firefox starts up, the following non-fatal error shows up.
+
 
 ```text
 [GFX1-]: No GPUs detected via PCI
@@ -57,6 +65,8 @@ Launch firefox from commandline, the follow non-fatal error shows up. Interestin
     [Child 52422, MediaDecoderStateMachine #1] WARNING: Decoder=7f733fa6d600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-5bxMr3/firefox-108.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
     ```
 
+Interestingly, Chrome browser happily chugs along without any video playback issue.
+
 ## Solution
 
 The first two issues are the same, *probably* due to a bug in Nvidia driver and can be resolved by forcing firefox to use webgl.
@@ -68,8 +78,9 @@ From <https://support.biodigital.com/hc/en-us/articles/218322977-How-to-turn-on-
 3. Search for webgl.disabled and make sure this preference is set to false. If it is currently set to true, click the toggle icon on the far right to change the value to false.
 4. Restart Firefox to apply your new settings.
 
-The third issue is due to missing decoder.
+The third issue is due to missing decoder. Firefox apparently uses it as fallback helper for some streaming video formats.
 
 ```bash
 sudo apt -y install ffmpeg
 ```
+
