@@ -78,7 +78,7 @@ From <https://support.biodigital.com/hc/en-us/articles/218322977-How-to-turn-on-
 3. Search for webgl.disabled and make sure this preference is set to false. If it is currently set to true, click the toggle icon on the far right to change the value to false.
 4. Restart Firefox to apply your new settings.
 
-The third issue is due to missing decoder. Firefox apparently uses it as fallback helper for some streaming video formats.
+The third issue is due to missing decoder. Firefox apparently falls back on *ffmpeg* some streaming video formats.
 
 ```bash
 sudo apt -y install ffmpeg
