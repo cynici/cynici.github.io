@@ -1,8 +1,7 @@
 # sudo X11 application over ssh
 
-Scenario: you need to run an X11 application as root user on a remote machine
 
-Unlike running console-based programs where you typically just:
+To run any console-based programs remote, you typically just:
 
 1. ssh to remote machine
 2. sudo *whatever-console-program*
@@ -12,7 +11,8 @@ To run X11 application as the ssh user, it is also straight-forward:
 1. ssh to remote machine
 2. *whatever-x11-application*
 
-It gets a bit complicated when you need to run both. In my case, I wanted to run `gparted` as *root* on a remote linux machine.
+
+It gets a bit complicated when you need to do both - to run an X11 application as root user on a remote machine. In my case, I wanted to run `gparted` as *root* on a remote linux machine.
 
 1. Enable X11 forwarding on remote machine, */etc/ssh/sshd_config*
 
