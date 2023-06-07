@@ -1,4 +1,4 @@
-# Git feature-branch Workflow
+# Git squash rebase Workflow
 
 Rebase-style instead of merge-style - changes on your branch
 are squashed into a single commit, then rebased on top of
@@ -28,9 +28,15 @@ Configure git push to use upstream, `git config --global push.default upstream` 
 1. Push to remote with the same branch name as the current local branch. Create remote branch if it doesn't exist.  `code-push`
 1. Create a pull request in Github.com parlance (or merge request in Gitlab)
 1. Repeat git commit, code-push as necessary to gain PR approval
-1. After PR is approved, rebase your branch on top of the latest main `git pull --rebase`
+1. After PR is approved, rebase your branch on top of the latest main `git pull --rebase` (equivalent to git fetch + git rebase)
 1. Force update remote adhoc branch, `code-push -f`
 1. Release to remote main, remove loxal and remote adhoc branch `code-release`
+
+### references
+
+- Detailed description of squash rebase workflow, <https://medium.com/swlh/squash-and-rebase-git-basics-5cb1be1e0dac>
+- Difference between 'git merge' and 'git rebase' <https://stackoverflow.com/q/16666089>
+- Squash commit and rebase <https://medium.com/swlh/squash-and-rebase-git-basics-5cb1be1e0dac>, differs from this article
 
 
 ## Shell aliases, functions
