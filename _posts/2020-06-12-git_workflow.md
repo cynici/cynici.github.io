@@ -1,4 +1,4 @@
-# Git Workflow
+# Git feature-branch Workflow
 
 Rebase-style instead of merge-style - changes on your branch
 are squashed into a single commit, then rebased on top of
@@ -8,14 +8,14 @@ just a single line of commits.
 
 You are concerned with two branches:
 - your adhoc branch
-- master
+- main (or master)
 
 There are no git-flow style `develop`, `release`, `hotfix`, etc branches.
-The master branch is expected (must be) deployable at any time.
-Commits should only end up in master if they leave master in a deployable
+The main branch is expected (must be) deployable at any time.
+Commits should only end up in main if they leave main in a deployable
 state.
 
-Don't push something to master if you don't intend to deploy it to
+Don't push something to main if you don't intend to deploy it to
 production relatively soon!
 
 ## Procedure
@@ -23,19 +23,14 @@ production relatively soon!
 Configure git push to use upstream, `git config --global push.default upstream` Otherwise you'll get an error on coe-release
 
 1. git clone {repo\_url}
-1. Start a new branch tracking master, `code-on FEAT-xyz` (use issue reference)
-1. Stage and commit locally, `git commit -a -m "meaningful commit message"`
-   Repeat as necessary.
-1. Push to remote with the same branch name as the current local
-   branch prefixed with `$USER-`. Create remote branch if it doesn't exist.
-   `code-push`
+1. Start a new branch tracking main, `code-on FEAT-xyz` (use issue reference)
+1. Stage and commit locally, `git commit -a -m "meaningful commit message"`. Repeat as necessary.
+1. Push to remote with the same branch name as the current local branch. Create remote branch if it doesn't exist.  `code-push`
 1. Create a pull request in Github.com parlance (or merge request in Gitlab)
 1. Repeat git commit, code-push as necessary to gain PR approval
-1. After PR is approved, rebase your branch on top of the latest master
-   `git pull --rebase`
+1. After PR is approved, rebase your branch on top of the latest main `git pull --rebase`
 1. Force update remote adhoc branch, `code-push -f`
-1. Release to remote master, remove loxal and remote adhoc branch
-   `code-release`
+1. Release to remote main, remove loxal and remote adhoc branch `code-release`
 
 
 ## Shell aliases, functions
@@ -48,10 +43,10 @@ function code-on() {
   # Checkout a new branch for a Jira issuea
   # params:
   #   $1 jira issue key
-  #   $2 tracking branch (default: master)
+  #   $2 tracking branch (default: main)
   (
     set -e
-    local upstream=${2:=master}
+    local upstream=${2:=main}
     local branch="${USER}-$1"
     info "creating local branch '$branch' which tracks 'origin/${upstream}'"
     (
@@ -66,7 +61,7 @@ function code-push() {
   (
     set -e
     local branch=`git rev-parse --abbrev-ref HEAD`
-    [[ "$branch" == "master" ]] && echo "should be on feature branch" && return 1
+    [[ "$branch" == "main" ]] && echo "should be on feature branch" && return 1
     info "pushing to remote branch 'origin/$branch'"
     (
       set -x
@@ -106,7 +101,7 @@ function code-pr() {
   local branch=`git rev-parse --abbrev-ref HEAD`
   local upstream=`git rev-parse --abbrev-ref HEAD@{upstream}`
   local short_upstream=${upstream#origin/}
-  [[ "$branch" == "master" ]] && echo "should be on feature branch" && return 1
+  [[ "$branch" == "main" ]] && echo "should be on feature branch" && return 1
   code-push
   info "creating pull request from '$branch' to '$short_upstream'"
   (
@@ -126,7 +121,7 @@ function code-release() {
   set -e
   local branch=`git rev-parse --abbrev-ref HEAD`
   local upstream=`git rev-parse --abbrev-ref HEAD@{upstream}`
-  [[ "$branch" == "master" ]] && echo "should be on feature branch" && return 1
+  [[ "$branch" == "main" ]] && echo "should be on feature branch" && return 1
   git fetch
   code-push
   info "preparing release of 'origin/$branch' into '$upstream'"
@@ -135,13 +130,13 @@ function code-release() {
   info "pushing to remote branch '$upstream'"
   (
     set -x
-    git push origin HEAD:master
+    git push origin HEAD:main
   )
   info "cleaning up"
   (
     set -x
-    git checkout master
-    git reset --hard origin/master
+    git checkout main
+    git reset --hard origin/main
     git push origin :${branch}
     git branch -d ${branch}
   )
@@ -152,11 +147,11 @@ function code-abandon-local() {
   set -e
   local branch=`git rev-parse --abbrev-ref HEAD`
   local upstream=`git rev-parse --abbrev-ref HEAD@{upstream}`
-  [[ "$branch" == "master" ]] && echo "should be on feature branch" && return 1
+  [[ "$branch" == "main" ]] && echo "should be on feature branch" && return 1
   [[ -z "$upstream" ]] && echo "sanity failure; upstream is empty?" && return 1
     (
       set -x
-      git checkout master
+      git checkout main
       git branch -d ${branch}
     )
   )
