@@ -76,7 +76,7 @@ function code-push() {
   )
 }
 function link-pr-jira() {
-  # Tell Jira that we've created the PR and link it
+  # Tell company XXXXX Jira that we've created the PR and link it
   # Params:
   #   $1 The pull request url
   (
@@ -86,10 +86,10 @@ function link-pr-jira() {
     return
   fi
   set -e
-  local repo=`git remote -v | grep fetch | grep -o 'TAKEALOT/[^.]*' | cut -d '/' -f2`
+  local repo=`git remote -v | grep fetch | grep -o 'XXXXX/[^.]*' | cut -d '/' -f2`
   local branch=`git rev-parse --abbrev-ref HEAD`
   local issue=${branch#*-}
-  local jirabase="https://jira.takealot.com/jira/rest/api/latest"
+  local jirabase="https://jira.XXXXX.com/jira/rest/api/latest"
   local pr_description=${pr#*github.com/}
   info "linking pull request $pr to jira issue $issue"
   (
@@ -114,7 +114,7 @@ function code-pr() {
     set -x
     local pr=`hub pull-request -h $branch -b $short_upstream -F <(git log -1 --pretty=%B)| grep -o 'http[^ ]*'`
     set +x
-    link-pr-jira "$pr"
+    #link-pr-jira "$pr"
   )
   )
 }
