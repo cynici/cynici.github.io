@@ -7,6 +7,7 @@ This workflow results in a master branch that contains no merges,
 just a single line of commits.
 
 You are concerned with two branches:
+
 - your adhoc branch
 - main (or master)
 
@@ -23,14 +24,14 @@ production relatively soon!
 Configure git push to use upstream, `git config --global push.default upstream` Otherwise you'll get an error on coe-release
 
 1. git clone {repo\_url}
-1. Start a new branch tracking main, `code-on FEAT-xyz` (use issue reference)
+1. Start a new adhoc branch tracking main, `code-on FEAT-xyz` (use issue reference)
 1. Stage and commit locally, `git commit -a -m "meaningful commit message"`. Repeat as necessary.
 1. Push to remote with the same branch name as the current local branch. Create remote branch if it doesn't exist.  `code-push`
 1. Create a pull request in Github.com parlance (or merge request in Gitlab)
 1. Repeat git commit, code-push as necessary to gain PR approval
-1. After PR is approved, rebase your branch on top of the latest main `git pull --rebase` (equivalent to git fetch + git rebase)
-1. Force update remote adhoc branch, `code-push -f`
-1. Release to remote main, remove loxal and remote adhoc branch `code-release`
+1. After PR is approved, squash multiple commits and rebase your branch on top of the latest main `git pull --rebase` (equivalent to git fetch + git rebase)
+1. [Force update safely](https://blog.gitbutler.com/git-tips-2-new-stuff-in-git/#safe-force-pushing) remote adhoc branch, `code-push --force-with-lease`
+1. Release to remote main, remove local and remote adhoc branch `code-release`
 
 ### references
 
@@ -38,10 +39,9 @@ Configure git push to use upstream, `git config --global push.default upstream` 
 - Difference between 'git merge' and 'git rebase' <https://stackoverflow.com/q/16666089>
 - Squash commit and rebase <https://medium.com/swlh/squash-and-rebase-git-basics-5cb1be1e0dac>, differs from this article
 
-
 ## Shell aliases, functions
 
-```
+```bash
 function info() {
   echo "$(tput setaf 7)$1$(tput sgr0)"
 }
