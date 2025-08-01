@@ -60,3 +60,77 @@
 
 .codecell table { width: auto; }
 
+// Custom footer layout - override theme defaults
+.site-footer .wrapper {
+  max-width: none !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.footer-col-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+.footer-col-1 {
+  flex: 1 !important;
+  margin-right: 2rem !important;
+  width: auto !important;
+  float: none !important;
+}
+
+.footer-col-2 {
+  flex: 2 !important;
+  text-align: left !important;
+  width: auto !important;
+  float: none !important;
+  margin-left: 0 !important;
+  padding-left: 2rem !important;
+}
+
+// Make social media icons more prominent
+.social-media-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  gap: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.social-media-list li {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-bottom: 0.5rem !important;
+  margin-right: 0 !important;
+  white-space: nowrap !important;
+}
+
+.social-media-list .svg-icon {
+  margin-right: 0.5rem !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-col-wrapper {
+    flex-direction: column;
+  }
+  
+  .footer-col-1, .footer-col-2 {
+    flex: none;
+    width: 100%;
+    text-align: left;
+    margin-right: 0;
+  }
+  
+  .social-media-list {
+    justify-content: flex-start;
+  }
+}
+

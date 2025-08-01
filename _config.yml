@@ -10,10 +10,16 @@ title: Lessons from the trench
 #description: This is where the description of your site will go. You should change it by editing the _config.yml file. It can be as long as you like! Happy blogging... ❤
 description: My note-to-self
 github_username: cynici
+repository: cynici/cynici.github.io
+baseurl: ""
 
 # Email and twitter are optional:
-email: cheewai.lai@gmail.com
+#email: cheewai.lai@gmail.com
 twitter_username: DevOpsPlumber
+
+mastodon:
+  - username: cheewai
+    instance: hachyderm.io
 
 # Set this to true to get LaTeX math equation support
 use_math:

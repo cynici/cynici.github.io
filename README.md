@@ -23,7 +23,7 @@ Gem packages which requires updating [Gemfile](Gemfile) and indirectly,
 Finally, check if the site gets served correctly. Inside the container,
 
 ```
-PAGES_REPO_NWO=cynici/cynici.github.io jekyll serve -d ./_site --watch --force_polling -H 0.0.0.0 -P 4000
+bundle exec jekyll serve --livereload --force_polling -H 0.0.0.0 -P 4000
 ```
 
 Browse to see if the site gets served correctly,
