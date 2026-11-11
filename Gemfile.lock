@@ -220,9 +220,9 @@ GEM
     minitest (5.17.0)
     net-http (0.9.1)
       uri (>= 0.11.1)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.19.5-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-musl)
+    nokogiri (1.19.5-x86_64-linux-musl)
       racc (~> 1.4)
     octicons (17.0.0)
     octokit (4.25.1)
@@ -277,7 +277,7 @@ DEPENDENCIES
   jekyll-github-metadata
   jekyll-octicons
   minima (~> 2.5)
-  nokogiri (~> 1.18.9)
+  nokogiri (~> 1.19.5)
   tzinfo (~> 1.2)
   tzinfo-data
   unf_ext (~> 0.0.7.7)
