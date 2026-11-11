@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trim git branches and worktrees"
-date: 2026-11-11 08:00:00 -0000
+date: 2026-11-11 06:00:00 -0000
 categories: engineering git
 ---
 
